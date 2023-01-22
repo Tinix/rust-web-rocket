@@ -1,0 +1,30 @@
+[default]
+address = "127.0.0.1"
+port = 8000
+workers = 16
+keep_alive = 5
+ident = "Rocket"
+log_level = "normal"
+temp_dir = "/tmp"
+cli_colors = true
+secret_key = "88Z/hXvrVqZZEw1MVVKHerD06mr2jMUuLa7Jz1KwwxQ="
+
+# [default.limits]
+form = "32KiB"
+data-form = "2MiB"
+file = "1MiB"
+string = "8KiB"
+bytes = "8KiB"
+json = "1MiB"
+msgpack = "1MiB"
+
+[default.tls]
+
+# certs = "/some/directory/cert-chain.pem
+# key = "/some/directory/key.pem
+[default.shutdown]
+ctrlc = true
+signals = ["term"]
+grace = 5
+mercy = 5
+force = true
